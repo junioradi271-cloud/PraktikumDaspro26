@@ -12,6 +12,7 @@ public class StudiKasus226 {
         int jumlahDokumen = rear.nextInt();
 
         int syaratDokumen;
+        boolean status;
 
        if (jumlahDokumen == 4){ 
         if (jenisKegiatan.equalsIgnoreCase("BELMAWA") || jenisKegiatan.equalsIgnoreCase("BAKORMA") || jenisKegiatan.equalsIgnoreCase("Mandiri")) {
@@ -24,6 +25,17 @@ public class StudiKasus226 {
                 System.out.println("Status : Pendanaan tidak di berikan dikarenakan tidak juara");
             }
         } else {
+             if (jenisKegiatan.equalsIgnoreCase("PKM")) {
+                System.out.println("Apakah anda lolos pendanaan? (true/false) : ");
+                status = rear.nextBoolean();
+                if (status == true) {
+                    System.out.println("Status : Pendanaan diberikan");
+                } else {
+                    System.out.println("Status : Pendanaan tidak diberikan");
+                }
+            } else {
+                System.out.println("Maaf, anda mengikuti kegiatan lain");
+            }
             
         }
        } else {
